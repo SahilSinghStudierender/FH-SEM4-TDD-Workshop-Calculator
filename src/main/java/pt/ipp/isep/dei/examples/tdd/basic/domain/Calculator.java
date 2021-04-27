@@ -18,11 +18,20 @@ public class Calculator {
     }
 
     public int subtract(int firstOperand, int secondOperand) {
-        throw new UnsupportedOperationException();
+        return firstOperand - secondOperand;
     }
 
+    /**
+     * Divides the dividend with the divisor, returning the result
+     *
+     * @param dividend The dividend to use
+     * @param divisor  The divisor to use
+     * @return Result of the division
+     */
     public int divide(int dividend, int divisor) {
-        throw new UnsupportedOperationException();
+        if (divisor == 0)
+            throw new ArithmeticException();
+        return dividend / divisor;
     }
 
     public int multiply(int firstOperand, int secondOperand) {
@@ -30,6 +39,16 @@ public class Calculator {
     }
 
     public int factorial(int firstOperand) {
-        throw new UnsupportedOperationException();
+        int value = 1;
+        int tempFirstOperand = firstOperand;
+
+        if (firstOperand > 0) {
+            for (int i = 0; i < tempFirstOperand; i++) {
+                value *= firstOperand;
+                firstOperand--;
+            }
+        }
+
+        return value;
     }
 }
