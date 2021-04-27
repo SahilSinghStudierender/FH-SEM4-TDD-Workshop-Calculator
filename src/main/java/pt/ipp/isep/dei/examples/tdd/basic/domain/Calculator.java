@@ -21,8 +21,16 @@ public class Calculator {
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * Divides the dividend with the divisor, returning the result
+     * @param dividend The dividend to use
+     * @param divisor The divisor to use
+     * @return Result of the division
+     */
     public int divide(int dividend, int divisor) {
-        throw new UnsupportedOperationException();
+        if(divisor == 0)
+            throw new ArithmeticException();
+        return dividend / divisor;
     }
 
     public int multiply(int firstOperand, int secondOperand) {
