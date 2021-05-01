@@ -377,6 +377,68 @@ public class CalculatorTest {
         });
     }
 
+    /**
+     * Test to ensure that factorial with a positive integer works fine
+     */
+    @Test
+    public void ensureFactorialWithTwoEqualsTwo() {
+        int firstOperand = 2;
+        int expectedResult = 2;
+
+        int result = new Calculator().factorial(firstOperand);
+
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Another test to ensure that factorial with a positive integer works fine
+     */
+    @Test
+    public void ensureFactorialWithThreeEqualsSix() {
+        int firstOperand = 3;
+        int expectedResult = 6;
+
+        int result = new Calculator().factorial(firstOperand);
+
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial with a negative number will result to an exception
+     */
+    @Test
+    public void ensureFactorialWithNegativeNumberThrowsException() {
+        int firstOperand = -1;
+
+        assertThrows(ArithmeticException.class, () -> {
+            new Calculator().factorial(firstOperand);
+        });
+    }
+
+    /**
+     * Test to ensure that factorial with zero will result to one
+     */
+    @Test
+    public void ensureFactorialWithZeroEqualsOne() {
+        int firstOperand = 0;
+        int expectedResult = 1;
+
+        int result = new Calculator().factorial(firstOperand);
+
+        assertEquals(expectedResult, result);
+    }
+
+    // This Test Case will run for a long time, since it will iterate through all the numbers!
+
+//    @Test
+//    public void ensureFactorialWithMaxIntValueThrowsException() {
+//        int firstOperand = Integer.MAX_VALUE;
+//
+//        assertThrows(ArithmeticException.class, () -> {
+//            new Calculator().factorial(firstOperand);
+//        });
+//    }
+
 }
 
 
