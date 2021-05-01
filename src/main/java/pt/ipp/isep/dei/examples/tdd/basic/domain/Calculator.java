@@ -39,16 +39,14 @@ public class Calculator {
     }
 
     public int factorial(int firstOperand) {
-        int value = 1;
-        int tempFirstOperand = firstOperand;
+        if(firstOperand < 0)
+            throw new ArithmeticException("Operand cannot be negative");
 
-        if (firstOperand > 0) {
-            for (int i = 0; i < tempFirstOperand; i++) {
-                value *= firstOperand;
-                firstOperand--;
-            }
+        int fact = 1;
+        for(int i = 1; i <= firstOperand; i++) {
+            fact *= i;
         }
 
-        return value;
+        return fact;
     }
 }
