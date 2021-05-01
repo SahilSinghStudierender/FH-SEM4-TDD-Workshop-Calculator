@@ -14,11 +14,11 @@ public class Calculator {
      * @return The sum of firstOperand with secondOperand.
      */
     public int sum(int firstOperand, int secondOperand) {
-        return firstOperand + secondOperand;
+        return Math.addExact(firstOperand, secondOperand);
     }
 
     public int subtract(int firstOperand, int secondOperand) {
-        return firstOperand - secondOperand;
+        return Math.subtractExact(firstOperand, secondOperand);
     }
 
     /**
@@ -35,7 +35,7 @@ public class Calculator {
     }
 
     public int multiply(int firstOperand, int secondOperand) {
-        return firstOperand * secondOperand;
+        return Math.multiplyExact(firstOperand, secondOperand);
     }
 
     public int factorial(int firstOperand) {
